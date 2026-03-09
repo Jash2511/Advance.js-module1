@@ -2,10 +2,10 @@ const user = {
     name: "Alice",
     greet: function () {
         console.log(this.name);
-        let innergreet = () =>  {
+        function innerGreet() {
             console.log(this.name);
         }
-        innergreet() ;
+        innerGreet.call(this);
     }
 };
 
