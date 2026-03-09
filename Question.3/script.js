@@ -7,7 +7,9 @@ const calc = {
 
 function bindBase(base) {
     // Return a function that takes (a, b) and returns base + a + b
-
+    return function (a, b) {
+        return base + a + b;
+    }
 }
 
 const fn = bindBase(10);
