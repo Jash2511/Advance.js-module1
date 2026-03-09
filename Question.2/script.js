@@ -1,9 +1,10 @@
 const timer = {
     name: "Timer",
     start: function () {
-        setTimeout(() => {
+        function innertimer() {
             console.log(this.name);
-        }, 100);
+        }
+        setTimeout(innertimer.bind(this), 100);
     }
 };
 
